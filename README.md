@@ -20,6 +20,8 @@ A Codepen clone, built with React and CodeMirror.
 
 # To clone
 
-`$ git clone https://github.com/AdityaBhattacharya1/Codepen-Clone`<br>
-`npm install`<br>
-`npm start`<br>
+```
+$ git clone https://github.com/AdityaBhattacharya1/Codepen-Clone
+npm install
+npm start
+```
