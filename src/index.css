@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(15, 17, 26);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(67, 71, 85);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.top-pane {
+    background-color: hsl(225, 6%, 25%);
+}
+
+.pane {
+    height: 60vh;
+    display: flex;
+}
+
+.editor-container {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background-color: hsl(225, 6%, 25%);
+}
+
+.editor-title {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(225, 6%, 13%);
+    color: white;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+/* To override default panel height */
+.CodeMirror {
+    height: 100% !important;
+}
+
+.code-mirror-wrapper {
+    flex-grow: 1;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.editor-container.collapsed {
+    flex-grow: 0;
+}
+
+/* To remove default overflow settings. */
+.editor-container.collapsed .CodeMirror-scroll {
+    position: absolute;
+    overflow: hidden !important;
+}
+
+.expand-collapse-btn {
+    margin-left: 0.5rem;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* To remove the wonky behaviour of the panel when the line is exceeded.*/
+.CodeMirror-wrap pre {
+    word-break: break-word !important;
+}
+
+.fullscreen-toggler {
+    position: absolute;
+    background-color: rgb(15, 17, 26);
+    color: white;
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 120px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.fullscreen-toggler:hover {
+    background-color: white;
+    color: hsl(225, 6%, 13%);
+}
+
+.error {
+    display: none;
+    font-family: sans-serif;
+    color: white;
+}
+
+@media screen and (max-width: 400px) {
+    .norm {
+        display: none;
+    }
+
+    .error {
+        display: block;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .error svg {
+        height: 50px;
+        width: 50px;
+    }
+
+    html {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('https://images.unsplash.com/photo-1610661777342-b3d16eb867ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80');
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
