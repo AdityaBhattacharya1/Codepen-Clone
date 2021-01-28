@@ -10,7 +10,10 @@ A Codepen clone, built with React and CodeMirror.
 
 -   Toggleable fullscreen mode
 -   Auto render code (within 250ms)
--   Auto-close tags (Supports JavaScript and HTML)
+-   Auto-close tags (For HTML and XML)
+-   Auto-close brackets (For JavaScript and CSS)
+-   Highlight unclosed brackets (For JavaScript)
+-   Highlight active brackets (Brackets near cursor)
 -   Linting
 -   Expand-collapse code editors
 -   Material (Ocean) theme
