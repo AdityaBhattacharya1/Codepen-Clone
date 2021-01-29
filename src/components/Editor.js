@@ -4,12 +4,15 @@ import 'codemirror/theme/material-ocean.css'
 import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
+
+// CodeMirror Add-ons
 import 'codemirror/addon/edit/closebrackets'
 import 'codemirror/addon/edit/matchbrackets'
 import 'codemirror/addon/edit/closetag'
 import 'codemirror/addon/display/fullscreen'
 import { Controlled as ControlledEditor } from 'react-codemirror2'
 
+// Expand-Compress buttons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -50,7 +53,7 @@ function Editor(props) {
                     matchBrackets: true,
                     highlightNonMatching: true,
                     autoCloseTags: true,
-                    fullScreen: true,
+                    fullScreen: true, 
                 }}
             />
         </div>
